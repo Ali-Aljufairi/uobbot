@@ -8,7 +8,7 @@ token = os.environ['TOKEN']
 
 desecription =\
     '''
-    uobbot
+    Uobbot
     '''
 
 bot = commands.Bot(command_prefix='$',
