@@ -1,9 +1,6 @@
 import os
-import discord
-from dotenv import load_dotenv
 from discord.ext import commands
 
-load_dotenv()
 token = os.environ['TOKEN']
 
 desecription =\
@@ -21,8 +18,7 @@ async def on_ready():
 
     print('Looged in as\n')
 
-    x = f"Name: {bot.user.name} ID:{bot.user.id}"
-    print(x)
+    print(x := f"Name: {bot.user.name} ID:{bot.user.id}")
 
     print('-'*len(x))
 
@@ -75,6 +71,11 @@ async def lockdown(ctx):
 @bot.command()
 async def GPA(ctx):
     await ctx.send("https://www.uob-bh.com/forum/pages/gpa/ \n https://uobgpa.github.io/v3/")
+
+
+@bot.command()
+async def uoblaw(ctx):
+    await ctx.send("https://law.uob.edu.bh/")
 
 
 bot.run(token)
