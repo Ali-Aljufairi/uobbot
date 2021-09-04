@@ -20,8 +20,6 @@ bot = commands.Bot(command_prefix='$',
 bot.remove_command('help')
 
 
-
-
 @bot.event
 async def on_ready():
 
@@ -33,7 +31,7 @@ async def on_ready():
 
 @bot.command()
 async def help(ctx):
-    embed = discord.Embed(title="HELP", description="All the commands available ",color=0x008F74) #,color=Hex code
+    embed = discord.Embed(title="HELP", description="All the commands available ",color=0x3AA35C) #,color=Hex code
     embed.add_field(name="$uobcontact", value="Will show all the ways to conatact uob \n",inline=False)
     embed.add_field(name="$uobplan", value="UCS\n",inline=False)
     embed.add_field(name="$drop",  value="Drop date\n",inline=False)
@@ -47,6 +45,8 @@ async def help(ctx):
     embed.add_field(name="$uobcob", value="UOB COB website\n",inline=False)
     embed.add_field(name="$uobit", value="UOB IT website\n",inline=False)
     embed.add_field(name="$olduob",value="Old UOB Website \n",inline=False)
+    embed.add_field(name="$uob",value="UOB Main\n",inline=False) 
+    embed.add_field(name="$sis",value="SiS\n",inline=False)     
     await ctx.send(embed=embed)
 
 
@@ -86,7 +86,7 @@ async def uobeng(ctx):
 
 @bot.command()
 async def Planner(ctx):
-    await ctx.send("https://sis.uob.edu.bh/uob_sis_prod/UI/StudentView/planner.htm")
+    await ctx.send("https://sis.uob.edu.bh/uob_sis_prod/UI/StudentView/planner.html")
 
 
 @bot.command()
@@ -125,6 +125,23 @@ async def uobcit(ctx):
 @bot.command()
 async def uobcob(ctx):
     await ctx.send("https://cob.uob.edu.bh/")
+
+
+@bot.command()
+async def uob(ctx):
+    await ctx.send("https://uob.edu.bh/")
+
+@bot.command()
+async def sis(ctx):
+    await ctx.send("https://sis.uob.edu.bh/UOB_SIS_PROD/Default.aspx")
+
+
+
+@client.command()
+@commands.has_permissions(administrator=True)
+async def kick(ctx, member: discord.Member, *, reason=None):
+    await member.kick(reason=reason)
+    await ctx.send(f'User {member} has kicked.')
 
 
 
