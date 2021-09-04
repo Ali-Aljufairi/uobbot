@@ -6,6 +6,8 @@ from discord.colour import Colour
 from discord.embeds import Embed
 from discord.ext import commands
 
+
+
 token = os.environ['TOKEN']
 
 desecription =\
@@ -137,7 +139,7 @@ async def sis(ctx):
 
 
 
-@client.command()
+@bot.command()
 @commands.has_permissions(administrator=True)
 async def kick(ctx, member: discord.Member, *, reason=None):
     await member.kick(reason=reason)
