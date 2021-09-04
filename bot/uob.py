@@ -1,22 +1,14 @@
 import os
-from discord import client
 import discord
-from discord import embeds
-from discord.colour import Colour
-from discord.embeds import Embed
 from discord.ext import commands
-
 
 
 token = os.environ['TOKEN']
 
-desecription =\
-    '''
-    Uobbot
-    '''
+description = '''Uobbot'''
 
 bot = commands.Bot(command_prefix='$',
-                   descpiprition=desecription,
+                   descpiprition=description,
                    case_insensitive=True)
 
 bot.remove_command('help')
@@ -31,29 +23,29 @@ async def on_ready():
 
     print('-'*len(x))
 
+
 @bot.command()
 async def help(ctx):
-    embed = discord.Embed(title="HELP", description="All the commands available ",color=0x3AA35C) #,color=Hex code
-    embed.add_field(name="$uobcontact", value="Will show all the ways to conatact uob \n",inline=False)
-    embed.add_field(name="$uobplan", value="UCS\n",inline=False)
-    embed.add_field(name="$drop",  value="Drop date\n",inline=False)
-    embed.add_field(name="$uobeng",value="UOB ENG Website\n",inline=False)
-    embed.add_field(name="$Planner", value="Website Planner\n",inline=False)
-    embed.add_field(name="$blackboard", value="Blackboard\n",inline=False)
-    embed.add_field(name="$lockdown", value="Lockdown\n",inline=False)
-    embed.add_field(name="$GPA", value="Websites to calulateGPA\n",inline=False)
-    embed.add_field(name="$uoblaw", value="UOB LAW Website\n",inline=False)
-    embed.add_field(name="$uobsci", value="UOB SCI Website\n",inline=False)
-    embed.add_field(name="$uobcob", value="UOB COB website\n",inline=False)
-    embed.add_field(name="$uobit", value="UOB IT website\n",inline=False)
-    embed.add_field(name="$olduob",value="Old UOB Website \n",inline=False)
-    embed.add_field(name="$uob",value="UOB Main\n",inline=False) 
-    embed.add_field(name="$sis",value="SiS\n",inline=False)     
+    embed = discord.Embed(
+        title="HELP", description="All the commands available ", color=0x3AA35C)  # ,color=Hex code
+    embed.add_field(name="$uobcontact",
+                    value="Will show all the ways to conatact uob \n", inline=False)
+    embed.add_field(name="$uobplan", value="UCS\n", inline=False)
+    embed.add_field(name="$drop",  value="Drop date\n", inline=False)
+    embed.add_field(name="$uobeng", value="UOB ENG Website\n", inline=False)
+    embed.add_field(name="$Planner", value="Website Planner\n", inline=False)
+    embed.add_field(name="$blackboard", value="Blackboard\n", inline=False)
+    embed.add_field(name="$lockdown", value="Lockdown\n", inline=False)
+    embed.add_field(
+        name="$GPA", value="Websites to calulateGPA\n", inline=False)
+    embed.add_field(name="$uoblaw", value="UOB LAW Website\n", inline=False)
+    embed.add_field(name="$uobsci", value="UOB SCI Website\n", inline=False)
+    embed.add_field(name="$uobcob", value="UOB COB website\n", inline=False)
+    embed.add_field(name="$uobit", value="UOB IT website\n", inline=False)
+    embed.add_field(name="$olduob", value="Old UOB Website \n", inline=False)
+    embed.add_field(name="$uob", value="UOB Main\n", inline=False)
+    embed.add_field(name="$sis", value="SiS\n", inline=False)
     await ctx.send(embed=embed)
-
-
-
-
 
 
 @bot.command()
@@ -111,19 +103,16 @@ async def uoblaw(ctx):
     await ctx.send("https://law.uob.edu.bh/")
 
 
-    
 @bot.command()
 async def uobsci(ctx):
     await ctx.send("https://science.uob.edu.bh/")
 
 
-    
 @bot.command()
 async def uobcit(ctx):
     await ctx.send("https://teachers.uob.edu.bh/")
 
 
-        
 @bot.command()
 async def uobcob(ctx):
     await ctx.send("https://cob.uob.edu.bh/")
@@ -133,10 +122,10 @@ async def uobcob(ctx):
 async def uob(ctx):
     await ctx.send("https://uob.edu.bh/")
 
+
 @bot.command()
 async def sis(ctx):
     await ctx.send("https://sis.uob.edu.bh/UOB_SIS_PROD/Default.aspx")
-
 
 
 @bot.command()
@@ -144,7 +133,6 @@ async def sis(ctx):
 async def kick(ctx, member: discord.Member, *, reason=None):
     await member.kick(reason=reason)
     await ctx.send(f'User {member} has kicked.')
-
 
 
 bot.run(token)
