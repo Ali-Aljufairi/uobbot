@@ -45,7 +45,9 @@ async def help(ctx):
     embed.add_field(name="$olduob", value="Old UOB Website \n", inline=False)
     embed.add_field(name="$uob", value="UOB Main\n", inline=False)
     embed.add_field(name="$sis", value="SiS\n", inline=False)
-    embed.add_field(name="$group", value="SiS\n", inline=False)
+    embed.add_field(name="$group", value="group\n", inline=False)
+    embed.add_field(name="$pass", value="website to change your password\n", inline=False)
+    
 
     await ctx.send(embed=embed)
 
@@ -137,7 +139,7 @@ async def kick(ctx, member: discord.Member, *, reason=None):
     await ctx.send(f'User {member} has kicked.')
     
     
-    @bot.command()
+@bot.command()
 async def group(ctx):
     await ctx.send("https://bit.ly/3jQPHhY")
 
