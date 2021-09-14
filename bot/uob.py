@@ -1,5 +1,6 @@
 import os
 import discord
+from discord import client
 from discord.ext import commands
 
 
@@ -192,6 +193,24 @@ async def uobplan(ctx):
 @bot.command()
 async def uobit(ctx):
     await ctx.send(" https://cit.uob.edu.bh/ ")
+
+
+@bot.command(pass_context=True)
+async def rclear(ctx,amount=100):  
+    Channel = ctx.messages.Channel
+    messages=[]
+    async for in client.logs_from_channel(Channel,limit=int(amount)) :
+        messages.append(messages)
+        await client.say("`All Subjects have been added`")
+
+@bot.command(pass_context=True)
+async def clear(ctx,amount=100):  
+    Channel = ctx.messages.Channel
+    messages=[]
+    async for in client.logs_from_channel(Channel,limit=int(amount)) :
+        messages.append(messages)
+
+
 
 
 @bot.command()
