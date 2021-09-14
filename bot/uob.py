@@ -199,15 +199,15 @@ async def uobit(ctx):
 async def rclear(ctx,amount=100):  
     Channel = ctx.messages.Channel
     messages=[]
-    async for in client.logs_from_channel(Channel,limit=int(amount)) :
+    async for messages in client.logs_from_channel(Channel,limit=int(amount)) :
         messages.append(messages)
         await client.say("`All Subjects have been added`")
 
 @bot.command(pass_context=True)
 async def clear(ctx,amount=100):  
-    Channel = ctx.messages.Channel
+    Channel3 = ctx.messages.Channel
     messages=[]
-    async for in client.logs_from_channel(Channel,limit=int(amount)) :
+    async for  messages in client.logs_from_channel(Channel3,limit=int(amount)) :
         messages.append(messages)
 
 
