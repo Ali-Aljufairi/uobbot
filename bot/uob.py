@@ -38,7 +38,7 @@ async def help(ctx):
     embed.add_field(name="$blackboard", value="Blackboard\n", inline=False)
     embed.add_field(name="$lockdown", value="Lockdown\n", inline=False)
     embed.add_field(
-        name="$GPA", value="Websites to calulateGPA\n", inline=False)
+        name="$GPA", value="Websites to calculateGPA\n", inline=False)
     embed.add_field(name="$uoblaw", value="UOB LAW Website\n", inline=False)
     embed.add_field(name="$uobsci", value="UOB SCI Website\n", inline=False)
     embed.add_field(name="$uobcob", value="UOB COB website\n", inline=False)
@@ -48,7 +48,7 @@ async def help(ctx):
     embed.add_field(name="$sis", value="SiS\n", inline=False)
     embed.add_field(name="$group", value="group\n", inline=False)
     embed.add_field(
-        name="$pass", value="website to change your password\n", inline=False)
+        name="$uobpass", value="website to change your password\n", inline=False)
 
     await ctx.send(embed=embed)
 
@@ -102,7 +102,7 @@ async def engroles(ctx):
     embed.add_field(name=":six: : 𝗖𝗛𝗘𝗡𝗚𝟮𝟵𝟬", value='\u200b', inline=False)
     embed.add_field(name=":seven: : 𝗖𝗦𝗖𝟭𝟬𝟯", value='\u200b', inline=False)
     embed.add_field(name=":eight: : 𝗘𝗘𝗡𝗚𝟭𝟬𝟬", value='\u200b', inline=False)
-    embed.add_field(name=":nine: : 𝗘𝗘𝗡𝗚𝟮𝟰𝟮", value='\u200b', inline=False)
+    embed.add_field(name=":nine: :𝗖𝗛𝗘𝗡𝗚𝟮𝟰𝟮", value='\u200b', inline=False)
     embed.add_field(name=":a: : 𝗘𝗘𝗡𝗚𝟮𝟱𝟭", value='\u200b', inline=False)
     embed.add_field(name=":b: : 𝗘𝗘𝗡𝗚𝟮𝟳𝟭", value='\u200b', inline=False)
     embed.add_field(name=":regional_indicator_c: : 𝗘𝗡𝗚𝗟𝟭𝟬𝟭",
@@ -110,8 +110,6 @@ async def engroles(ctx):
     embed.add_field(name=":regional_indicator_d: : 𝗘𝗡𝗚𝗟𝟭𝟬2",
                     value='\u200b', inline=False)
     await ctx.send(embed=embed)
-    
-
 
 
 @bot.command()
@@ -126,14 +124,14 @@ async def urroles(ctx):
     await ctx.send(embed=embed)
 
 
-
 @bot.command()
 @commands.has_permissions(administrator=True)
 async def itroles1(ctx):
     embed = discord.Embed(
 
         title="IT College", description="", color=0x9AE2E2)  # ,color=Hex code
-    embed.add_field(name=":one: : 𝐈𝐓𝐂𝐄𝟏𝟎𝟏/𝗜𝗧𝗡𝗘𝟭𝟭𝟬", value='\u200b', inline=False)
+    embed.add_field(name=":one: : 𝐈𝐓𝐂𝐄𝟏𝟎𝟏/𝗜𝗧𝗡𝗘𝟭𝟭𝟬",
+                    value='\u200b', inline=False)
     embed.add_field(name=":two: : 𝐄𝐍𝐆𝗟𝟏𝟓𝟒", value='\u200b', inline=False)
     embed.add_field(name=":three: : 𝐄𝐍𝐆𝗟𝟏𝟓𝟓", value='\u200b', inline=False)
     embed.add_field(name=":four: : 𝐄𝐍𝐆𝗟𝟐𝟏𝟗", value='\u200b', inline=False)
@@ -144,18 +142,27 @@ async def itroles1(ctx):
     embed.add_field(name=":nine: : 𝐈𝐓𝐂𝐒𝟐𝟓𝟓", value='\u200b', inline=False)
     embed.add_field(name=":a: : 𝗜𝗧𝗖𝗘𝟯𝟏𝟒/𝟮𝟱𝟮", value='\u200b', inline=False)
     embed.add_field(name=":b: : 𝐈𝐓𝐂𝐄𝟑𝟐𝟱", value='\u200b', inline=False)
-    embed.add_field(name=":regional_indicator_c: : 𝐈𝐓𝐂𝐄𝟑𝟒𝟎", value='\u200b', inline=False)
-    embed.add_field(name=":regional_indicator_d: : 𝗜𝗧𝗖𝗘𝟯𝟱𝟯",value='\u200b', inline=False)
-    embed.add_field(name=":regional_indicator_e: : 𝐈𝐓𝐂𝐄𝟑𝟲𝟒 ",value='\u200b', inline=False)
-    embed.add_field(name=":regional_indicator_f: : 𝐈𝐓𝐂𝐄𝟑𝟳𝟎 ",value='\u200b', inline=False)
-    embed.add_field(name=":regional_indicator_g: : 𝐈𝐓𝐂𝐄𝟒𝟭𝟲",value='\u200b', inline=False)
-    embed.add_field(name=":regional_indicator_h: : 𝐈𝐓𝐂𝐄𝟒𝟱𝟑",value='\u200b', inline=False)
-    embed.add_field(name=":regional_indicator_i: :𝐈𝐓𝐂𝐒𝟏𝟏𝟑",value='\u200b', inline=False)
-    embed.add_field(name=":regional_indicator_j: :𝐈𝐓𝐂𝐒𝟏𝟏𝟒",value='\u200b', inline=False)
-    embed.add_field(name=":regional_indicator_k: :𝐈𝐓𝐂𝐒𝟐𝟏𝟒",value='\u200b', inline=False)
+    embed.add_field(name=":regional_indicator_c: : 𝐈𝐓𝐂𝐄𝟑𝟒𝟎",
+                    value='\u200b', inline=False)
+    embed.add_field(name=":regional_indicator_d: : 𝗜𝗧𝗖𝗘𝟯𝟱𝟯",
+                    value='\u200b', inline=False)
+    embed.add_field(name=":regional_indicator_e: : 𝐈𝐓𝐂𝐄𝟑𝟲𝟒 ",
+                    value='\u200b', inline=False)
+    embed.add_field(name=":regional_indicator_f: : 𝐈𝐓𝐂𝐄𝟑𝟳𝟎 ",
+                    value='\u200b', inline=False)
+    embed.add_field(name=":regional_indicator_g: : 𝐈𝐓𝐂𝐄𝟒𝟭𝟲",
+                    value='\u200b', inline=False)
+    embed.add_field(name=":regional_indicator_h: : 𝐈𝐓𝐂𝐄𝟒𝟱𝟑",
+                    value='\u200b', inline=False)
+    embed.add_field(name=":regional_indicator_i: :𝐈𝐓𝐂𝐒𝟏𝟏𝟑",
+                    value='\u200b', inline=False)
+    embed.add_field(name=":regional_indicator_j: :𝐈𝐓𝐂𝐒𝟏𝟏𝟒",
+                    value='\u200b', inline=False)
+    embed.add_field(name=":regional_indicator_k: :𝐈𝐓𝐂𝐒𝟐𝟏𝟒",
+                    value='\u200b', inline=False)
 
     await ctx.send(embed=embed)
- 
+
 
 @bot.command()
 @commands.has_permissions(administrator=True)
@@ -163,21 +170,26 @@ async def itroles2(ctx):
     embed = discord.Embed(
 
         title="IT College", description="", color=0x9AE2E2)  # ,color=Hex code
-    embed.add_field(name=":regional_indicator_m: : 𝐈𝐓𝐂𝐒𝟐𝟓𝟒", value='\u200b', inline=False)
-    embed.add_field(name=":regional_indicator_n: : 𝐈𝐓𝐂𝐒𝟐𝟖𝟓",value='\u200b', inline=False)
-    embed.add_field(name=":regional_indicator_o: : 𝗜𝗧𝗖𝗦𝟯𝟭𝟳 ",value='\u200b', inline=False)
-    embed.add_field(name=":regional_indicator_p: : 𝗜𝗧𝗖𝗦𝟯𝟮𝟭 ",value='\u200b', inline=False)
-    embed.add_field(name=":regional_indicator_r: : 𝐈𝐓𝐂𝐒𝟑𝟑𝟎",value='\u200b', inline=False)
-    embed.add_field(name=":regional_indicator_s: :𝗜𝗧𝗖𝗦𝟯𝟴𝟵",value='\u200b', inline=False)
-    embed.add_field(name=":regional_indicator_t: :𝗜𝗧𝗖𝗦𝟯𝟵𝟲",value='\u200b', inline=False)
-    embed.add_field(name=":regional_indicator_u: :𝐈𝐓𝐒𝐄𝟐𝟎𝟏",value='\u200b', inline=False)
-    embed.add_field(name=":regional_indicator_v: :𝗹𝗧𝗡𝗘𝟮𝟯𝟭",value='\u200b', inline=False)
-
+    embed.add_field(name=":regional_indicator_m: : 𝐈𝐓𝐂𝐒𝟐𝟓𝟒",
+                    value='\u200b', inline=False)
+    embed.add_field(name=":regional_indicator_n: : 𝐈𝐓𝐂𝐒𝟐𝟖𝟓",
+                    value='\u200b', inline=False)
+    embed.add_field(name=":regional_indicator_o: : 𝗜𝗧𝗖𝗦𝟯𝟭𝟳 ",
+                    value='\u200b', inline=False)
+    embed.add_field(name=":regional_indicator_p: : 𝗜𝗧𝗖𝗦𝟯𝟮𝟭 ",
+                    value='\u200b', inline=False)
+    embed.add_field(name=":regional_indicator_r: : 𝐈𝐓𝐂𝐒𝟑𝟑𝟎",
+                    value='\u200b', inline=False)
+    embed.add_field(name=":regional_indicator_s: :𝗜𝗧𝗖𝗦𝟯𝟴𝟵",
+                    value='\u200b', inline=False)
+    embed.add_field(name=":regional_indicator_t: :𝗜𝗧𝗖𝗦𝟯𝟵𝟲",
+                    value='\u200b', inline=False)
+    embed.add_field(name=":regional_indicator_u: :𝐈𝐓𝐒𝐄𝟐𝟎𝟏",
+                    value='\u200b', inline=False)
+    embed.add_field(name=":regional_indicator_v: :𝗹𝗧𝗡𝗘𝟮𝟯𝟭",
+                    value='\u200b', inline=False)
 
     await ctx.send(embed=embed)
-
-
-
 
 
 @bot.command()
@@ -195,24 +207,6 @@ async def uobit(ctx):
     await ctx.send(" https://cit.uob.edu.bh/ ")
 
 
-@bot.command(pass_context=True)
-async def rclear(ctx,amount=100):  
-    Channel = ctx.messages.Channel
-    messages=[]
-    async for messages in client.logs_from_channel(Channel,limit=int(amount)) :
-        messages.append(messages)
-        await client.say("`All Subjects have been added`")
-
-@bot.command(pass_context=True)
-async def clear(ctx,amount=100):  
-    Channel3 = ctx.messages.Channel
-    messages=[]
-    async for  messages in client.logs_from_channel(Channel3,limit=int(amount)) :
-        messages.append(messages)
-
-
-
-
 @bot.command()
 async def olduob(ctx):
     await ctx.send(" http://offline.uob.edu.bh/en/")
@@ -220,7 +214,7 @@ async def olduob(ctx):
 
 @bot.command()
 async def drop(ctx):
-    await ctx.send("23 december 2021")
+    await ctx.send(("23 december 2021"))
 
 
 @bot.command()
@@ -292,7 +286,7 @@ async def group(ctx):
 
 @bot.command()
 async def uobpass(ctx):
-    await ctx.send("profile.uob.edu.bh")
+    await ctx.send("https://profile.uob.edu.bh/showLogin.cc")
 
 
 @bot.command()
