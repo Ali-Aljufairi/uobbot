@@ -49,6 +49,7 @@ async def help(ctx):
     embed.add_field(name="$group", value="group\n", inline=False)
     embed.add_field(
         name="$uobpass", value="website to change your password\n", inline=False)
+    embed.add_field(name="$AC", value="Will show the Academic Caldender\n", inline=False)
 
     await ctx.send(embed=embed)
 
@@ -287,6 +288,12 @@ async def group(ctx):
 @bot.command()
 async def uobpass(ctx):
     await ctx.send("https://profile.uob.edu.bh/showLogin.cc")
+
+
+
+@bot.command()
+async def AC(ctx):
+    await ctx.send("https://bit.ly/2XEG8ub")    
 
 
 @bot.command()
